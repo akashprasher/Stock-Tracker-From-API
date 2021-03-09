@@ -27,6 +27,37 @@ if (comSymbol !== undefined) {
 			companyName = data.Name;
 			console.log(companyName);
 			ftCnt(companyName);
+
+			listDetailsHeading = [
+				"Total Employees",
+				"Exchange",
+				"Sector",
+				"Industry",
+			];
+
+			listDetailsParagraph = [
+				data.FullTimeEmployees,
+				data.Exchange,
+				data.Sector,
+				data.Industry,
+			];
+			// valueDetails
+
+			var cardDataOne = `<div class="col-sm-6 pt-2 pb-2"> <div class="card"> <div class="card-body"> <h5 class="card-title">`;
+			var cardDataTwo = `</h5> <p class="card-text">`;
+			var cardDataThree = `</p> </div> </div> </div>`;
+			var cardData = "";
+
+			for (var i = 0; i < listDetailsHeading.length; i++) {
+				cardData +=
+					cardDataOne +
+					listDetailsHeading[i] +
+					cardDataTwo +
+					listDetailsParagraph[i] +
+					cardDataThree;
+			}
+
+			document.getElementById("valueDetails").innerHTML = cardData;
 		});
 	document.getElementById("default").style.display = "none";
 } else {
@@ -85,17 +116,11 @@ function redirectCompany() {
 	window.location.href = "?s=" + companyID;
 }
 
-document.getElementById("footer-content").style.color = "#ecf0f1";
-// document.getElementById("footer-content").innerHTML = `
-// <div class="text-center p-1">
-//     <p class="pt-3">Data Served For ${companyName} | © Stock Tracker 🚀</p>
-// </div>
-// `;
-
 function ftCnt(companyName) {
+	document.getElementById("footer-content").style.color = "#ecf0f1";
 	document.getElementById("footer-content").innerHTML = `
-            <div class="text-center p-1">
-                <p class="pt-3">Data Served For ${companyName} | © Stock Tracker 🚀</p>
-            </div>
-            `;
+    <div class="text-center p-1">
+        <p class="pt-3">Data Served For ${companyName} | © <a href="/">Stock Tracker</a> 🚀</p>
+    </div>
+    `;
 }
