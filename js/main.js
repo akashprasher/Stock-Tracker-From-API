@@ -1,6 +1,7 @@
 const queryString = window.location.search; //?s={symbol}
 comSymbol = queryString.substring(3, queryString.length).toUpperCase();
 
+var baseUrl = "https://akashprasher.github.io/Stock-Tracker-From-API/";
 var apiUrl =
 	"https://www.alphavantage.co/query?function=OVERVIEW&symbol=" +
 	comSymbol +
@@ -133,7 +134,7 @@ function ftCnt(companyName) {
 	document.getElementById("footer-content").style.color = "#ecf0f1";
 	document.getElementById("footer-content").innerHTML = `
     <div class="text-center p-1">
-        <p class="pt-3">Data Served For ${companyName} | © <a href="/">Stock Tracker</a> 🚀</p>
+        <p class="pt-3">Data Served For ${companyName} | © <a href="${baseUrl}">Stock Tracker</a> 🚀</p>
     </div>
     `;
 }
