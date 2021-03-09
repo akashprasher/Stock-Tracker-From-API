@@ -27,10 +27,6 @@ main {
 	text-align: justify;
 }
 
-/* .input-cmp {
-	width: 40%;
-} */
-
 #default {
 	height: 80vh;
 }
@@ -46,4 +42,14 @@ main {
 
 footer {
 	background-color: #2c3a47;
+}
+
+footer a {
+	text-decoration: none !important;
+	color: #ecf0f1;
+}
+
+footer a:hover {
+	text-decoration: none !important;
+	color: #ecf0f1;
 }
