@@ -19,16 +19,21 @@
 				<h2>$<span id="com-code"></span> Stock Tracker 🚀</h2>
 			</div>
 		</header>
-		<main class="pt-3 pb-3">
+		<main class="pt-5 pb-3">
 			<div id="details" class="container">
 				<div>
 					<h3 id="company-name" class="font-weight-bold">
-						Company Description
+						Company Name Loading ...
 					</h3>
 					<p id="company-description">Loading ...</p>
 				</div>
-				<div>
-					<canvas id="myChart"></canvas>
+				<div class="mt-5">
+					<h4 class="font-weight-bold">Graphical Representation</h4>
+					<canvas class="mt-5" id="myChart"></canvas>
+				</div>
+				<div class="mt-5">
+					<h4 class="font-weight-bold">Details</h4>
+					<div id="valueDetails" class="row pt-4 pb-4"></div>
 				</div>
 			</div>
 			<div id="default" class="container">
@@ -41,16 +46,17 @@
 							>
 							<a href="?s=ibm"><button class="btn btn-success">IBM</button></a>
 						</div>
-						<div class="col-sm-6 pt-3 pb-3 d-flex text-center">
-							<input
-								id="cmp-id"
-								class="form-control mr-3"
-								type="text"
-								placeholder="or simply enter company id"
-							/>
-							<button class="btn btn-primary" onclick="redirectCompany()">
-								Submit
-							</button>
+						<div class="col-sm-6 pt-3 pb-3 text-center">
+							<form action="javascript:redirectCompany()" class="d-flex">
+								<input
+									id="cmp-id"
+									class="form-control mr-3"
+									type="text"
+									placeholder="or simply enter company id"
+									autocomplete="off"
+								/>
+								<button class="btn btn-primary">Submit</button>
+							</form>
 						</div>
 					</div>
 				</div>
