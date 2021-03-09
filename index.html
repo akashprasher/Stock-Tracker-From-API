@@ -16,19 +16,50 @@
 	<body>
 		<header>
 			<div class="container main-heading pt-3 pb-3 text-center">
-				<h2>$GME Stock Tracker 🚀</h2>
+				<h2>$<span id="com-code"></span> Stock Tracker 🚀</h2>
 			</div>
 		</header>
-		<main>
-			<div class="container">
-				<p>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad dicta
-					pariatur ratione quaerat sint dolores cum, rem sed minus eaque
-					deleniti repudiandae, fugiat aliquam id atque accusamus. Sequi, culpa
-					expedita?
-				</p>
+		<main class="pt-3 pb-3">
+			<div id="details" class="container">
+				<div>
+					<h3 id="company-name" class="font-weight-bold">
+						Company Description
+					</h3>
+					<p id="company-description">Loading ...</p>
+				</div>
+				<div>
+					<canvas id="myChart"></canvas>
+				</div>
+			</div>
+			<div id="default" class="container">
+				<div class="deafult-container text-center">
+					<h4 class="font-weight-bold">Please Choose Company</h4>
+					<div class="row pt-4 text-center">
+						<div class="col-sm-6 pt-3 pb-3 text-center">
+							<a href="?s=gem"
+								><button class="btn btn-success">GameStop Corp</button></a
+							>
+							<a href="?s=ibm"><button class="btn btn-success">IBM</button></a>
+						</div>
+						<div class="col-sm-6 pt-3 pb-3 d-flex text-center">
+							<input
+								id="cmp-id"
+								class="form-control mr-3"
+								type="text"
+								placeholder="or simply enter company id"
+							/>
+							<button class="btn btn-primary" onclick="redirectCompany()">
+								Submit
+							</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</main>
+		<footer>
+			<div id="footer-content" class="container"></div>
+		</footer>
 	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 	<script src="./js/main.js"></script>
 </html>
