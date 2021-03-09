@@ -138,3 +138,11 @@ function ftCnt(companyName) {
     </div>
     `;
 }
+
+// Message for Console/Terminal
+console.log(`🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+
+Stock Tracker ~?s={symbol}'😂   
+https://github.com/akashprasher/
+
+🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀`);
