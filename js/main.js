@@ -77,7 +77,7 @@ function displayChart(
 ) {
 	var ctx = document.getElementById("myChart").getContext("2d");
 	var myChart = new Chart(ctx, {
-		type: "bar",
+		type: "polarArea",
 		data: {
 			labels: [
 				"SharesOutstanding",
@@ -87,7 +87,7 @@ function displayChart(
 			],
 			datasets: [
 				{
-					label: ["Let me figure this out"],
+					label: [""],
 					data: [
 						SharesOutstanding,
 						SharesFloat,
