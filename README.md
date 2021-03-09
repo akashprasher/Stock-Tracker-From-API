@@ -4,9 +4,9 @@
 	Endpoint(https://www.alphavantage.co/)
 </p>
 <p>Just need to pass the company code as the URL params</p>
-		https://akashprasher.github.io/Stock-Tracker-From-API?s={CompanyCode}
+		`https://akashprasher.github.io/Stock-Tracker-From-API?s={CompanyCode}`
 <p>Where {ComapnyCode} is equal to the company code.</p>
 <p>For example s=ibm or s=gme</p>
 
-<h5>Manually entering the Company code</h5>
+<h4>Manually entering the Company code</h4>
 <img src="./assets/img1.jpg">
