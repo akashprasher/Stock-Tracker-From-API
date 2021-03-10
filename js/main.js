@@ -131,6 +131,7 @@ function redirectCompany() {
 }
 
 function ftCnt(companyName) {
+	document.getElementById("title").innerHTML = `${companyName} Stock Tracker`;
 	document.getElementById("footer-content").style.color = "#ecf0f1";
 	document.getElementById("footer-content").innerHTML = `
     <div class="text-center p-1">
